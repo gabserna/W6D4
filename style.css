@@ -1,157 +1,117 @@
 * {
-  font-family: 'Raleway', sans-serif;
-  color:#fff;
-  margin: 0;
-  /*padding: 0;*/
-  background-color:#202020;
-  box-sizing:border-box;
+    font-family: 'Raleway', sans-serif;
 }
-body {
-  display: block;
-  justify-content: center;
-  margin:0 auto; 
-  max-width:840px;
-  font-size:12pt;
-}
-h1 {
-  color:#fff;
-  font-weight: bolder;
-  /*background-color: #666666;*/
-  margin-bottom: 2px;
-  padding: 0.5rem;
-}
-#comments {    /* REVISAR PARA QUITAR*/
-  /*background-color:turquoise;*/
-  padding: 5px 5px;
-}
-
-.feedback{ /* REVISAR PARA QUITAR*/
-  display: flex;
-  position: relative;
-}
-
 .container {
-  height: 500px;
-  width: 900px;
-  border: 1px solid yellow;
-  padding: 10px;
-  margin-top: 5px;
-  align-items: center;
+    position: fixed;
+    height: 95%;
+    width:80%;
+    border: 3px solid #E0E0E0;
+    border-radius: 1%;
+    margin: 0 10% 0 10%;
+}
+#firstComm {
+    margin: 0.5em 0 0 1.5em;
+}
+.replies {
+    position:fixed;
+    height: 68%; 
+    width:80%;
+    background: #E0E0E0;
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: none;
+}
+.replies div{
+    margin: 20px auto;
+    width: 95%;
+    padding: 10px 0px;
+}
 
-  border-radius: 3px;
+#normalTxt {
+    font-size: 1em;
+    font-weight:500;
 }
-#createPost {
-  display:flex; 
-  position: relative;
-  /*bottom: 0;  */  
-  justify-content: space-between;
-  align-items: bottom;
-  margin-top: 0;
-  border: 3px solid orangered;
+
+#biggerTxt {
+    font-size: 2.5em;
+    font-weight: 500;
 }
-#txtCom {
-  width: 535px;
+
+#UserComments {
+    background: #fff;
+    position: absolute;
+    width:100%;
+    height: 40px;
+    bottom:5px;
+    overflow: hidden;
 }
-#usrCom{
-  width: 180px;
-}
+
 input {
-  margin: 5px 5px 5px 0;
-  border-radius: 3px;
+    float: left;
+    width: 15%;
+    margin: 4px 0.5% 0 0.5%;
+    padding: 0; 
+    border-color: #666666;
 }
 
-
-#myEdit {
-  width: 900px;
-  border: 3px solid cyan;
-}
-#editDiv {
-  display:flex;
-  justify-content: flex-end;
-  align-content: flex-end;
+textarea { 
+    float: left;
+    width: 75%;
+    margin: 4px 0.5% 0 0;
+    padding: 0; 
+    border-color: 2px #666666;
 }
 
-.yourReply {   /* REVISAR PARA VER SI SE QUITA*/
-  display : flex;
-  justify-content: space-between;
-  align-items: bottom;
-  margin-top: 0;
+.save {
+    margin-top: 2.2px;
+    width: 8%;
+    padding: 0;
+    float: left;
+    color: #73D7FF;
+    border: none;
+    cursor:pointer;
 }
 
-#name {   /* OK */
-  margin-left: 5px;
-  width: 8rem;
+.deleteMe, .editMe {
+    float: right;
+    border: none;
+    color: #73D7FF;
+    cursor:pointer;
 }
-#userComment { /* OK */
-  width: 42rem;
+.updateMe {
+    float: right;
+    width:5em;
+    height:2em;
+    margin-left:1em;
+    color: #73D7FF;
+    border: 0;
+    cursor:pointer;
 }
-  
-#send { /* OK -------cambiar color*/   /* REVISAR PARA VER SI SE QUITA*/
-  background-color: darkslategray;
-  color: lightskyblue;
-  font-weight: bolder;
-  border-radius: 3px;
-  margin: 2px;
-  cursor: pointer;
-}
-  
-#output {
-  max-width: 250px;
-}
-
-#muestrate{   /* REVISAR PARA QUITAR*/
-  cursor: pointer;
+#updateComm {
+    float: left;
+    width: 75%;
+    margin: 0 0 0 5em;
+    padding-bottom: -5;
 }
 
-.username {
-  position:absolute;
-  top:-1.5em;
-  left:0;
-  margin-left:2rem;
-  font-weight:bold;
-  width: 250px;
+img {
+   float:left;
+   top: -105px;
+   padding: 0 10px 0 5px;
+   width: 50px;
+   height: 50px;
 }
 
-#avatar {
-  background-image: url("/Users/Family/Desktop/W6D4/avatar.png");
-  position: block; 
-  max-width:3rem; 
-  max-height:3rem; 
-  border:2px solid #AAA;
-  border-radius:1.5rem; 
-  top:-0.5rem; 
-  left:-0.5rem;
-}
-#delete, #edit {
-  cursor: pointer;
-  display : flex;
-  justify-content: space-between;
-  align-items: top right;
-  margin-top: 0;
+.theReply {
+    width:100%;
+    background-color: #FFFF;
+    height:80px;
 }
 
-.comment {
-  /*background-color: #AAA;*/
-  position:block; 
-  margin-top: 0.5em;
-  border:2px solid #AAA;
-  border-radius: 0.25em; 
-  font-size:10pt;
-}
-.comment p {
-  /*background-color: transparent;*/
-  display: flex;
-  flex-direction: row;
-  color: green;
-  font-weight: bolder;
-  margin-left: 3rem;
-}
-.row {
-  border:2px solid green;
-  
+#username, #comment {
+    border-color: #666666;
 }
 
-#postBody {
-  font-size: 25px;
-  font-weight: bolder;
+h2 {
+    margin: 0;
 }
